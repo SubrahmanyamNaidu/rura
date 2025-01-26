@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Container, Typography, Grid, Card, CardContent, Button, Box } from '@mui/material';
 import styled from '@emotion/styled';
 
@@ -98,6 +98,9 @@ const pastEvents = [
 ];
 
 function Events() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <PageWrapper>
       <HeroSection>

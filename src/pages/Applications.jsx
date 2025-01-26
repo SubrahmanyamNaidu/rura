@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Container, Typography, Grid, Card, CardContent, Button, Box, TextField, MenuItem } from '@mui/material';
 import styled from '@emotion/styled';
+import A1 from '../assets/a1.png'
+import A2 from '../assets/a2.png'
+import A3 from '../assets/a3.png'
+
 
 const PageWrapper = styled(Box)`
   background: #f9fafb;
@@ -71,21 +75,24 @@ const programs = [
   {
     title: 'Entrepreneurship Program',
     description: 'Empowering individuals to start and grow their businesses.',
-    image: 'https://source.unsplash.com/400x300/?business,entrepreneurship',
+    image: A3,
   },
   {
     title: 'Volunteer Program',
     description: 'Join our volunteer network and make an impact in your community.',
-    image: 'https://source.unsplash.com/400x300/?volunteer,community',
+    image: A1,
   },
   {
     title: 'Skill Development Program',
     description: 'Enhance your skills with our expert-led training programs.',
-    image: 'https://source.unsplash.com/400x300/?skills,training',
+    image: A2,
   },
 ];
 
 function Applications() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   const [formData, setFormData] = useState({
     name: '',
     email: '',

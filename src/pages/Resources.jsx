@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Container, Typography, Grid, Card, CardContent, Button, Box } from '@mui/material';
 import { Article, Star, CloudDownload } from '@mui/icons-material';
 import styled from '@emotion/styled';
@@ -102,6 +102,9 @@ const resourcesData = [
 ];
 
 function Resources() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }); 
   return (
     <PageWrapper>
       <HeroSection>

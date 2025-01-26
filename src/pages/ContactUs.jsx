@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Container, Typography, Grid, Card, CardContent, TextField, Button, Box } from '@mui/material';
 import { Email, Phone, LocationOn, Facebook, Twitter, LinkedIn } from '@mui/icons-material';
 import styled from '@emotion/styled';
@@ -69,6 +69,9 @@ const contactDetails = [
 ];
 
 function ContactUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <PageWrapper>
       <Container maxWidth="lg">

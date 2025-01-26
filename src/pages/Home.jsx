@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from 'react';
 import { Box, Typography, Button, Container } from "@mui/material";
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
@@ -8,13 +8,14 @@ import Cimage1 from "../assets/Cimg1.jpg"
 import Cimage2 from "../assets/Cimg2.jpg"
 import Cimage3 from "../assets/Cimg3.jpg"
 const HeroSection = styled(Box)`
-  height: 100vh;
+  height:88vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   text-align: center;
-  padding: 0 20px;
+  overflow-y:hidden;
+  
 `;
 
 const GradientText = styled(Typography)`
@@ -26,7 +27,7 @@ const GradientText = styled(Typography)`
 `;
 
 const StyledButton = styled(Button)`
-  padding: 12px 24px;
+  
   font-size: 1.2rem;
   font-weight: bold;
   border-radius: 30px;
@@ -36,6 +37,9 @@ const StyledButton = styled(Button)`
 const images = [Cimage1,Cimage2,Cimage3];
 
 function Home() {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+  });
   const navigate = useNavigate();
 
   const handleNavigation = () => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Box, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
@@ -65,6 +65,9 @@ const initiatives = [
 ];
 
 function Initiatives() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
       <InitiativesSection>

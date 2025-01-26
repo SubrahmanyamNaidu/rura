@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Container, Typography, Button, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
@@ -37,6 +37,9 @@ const StyledButton = styled(Button)`
 `;
 
 function PageNotFound() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <PageWrapper>
       <Container>

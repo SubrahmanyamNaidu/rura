@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Container, Typography, Box, Grid, Card, CardContent } from '@mui/material';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
@@ -38,6 +38,9 @@ const GradientText = styled(Typography)`
 `;
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
       <AboutSection>
