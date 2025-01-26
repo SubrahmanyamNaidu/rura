@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route,useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Initiatives from './pages/Initiatives';
@@ -9,11 +10,21 @@ import ContactUs from './pages/ContactUs';
 import Applications from './pages/Applications';
 import Navbar from './components/Navbar';
 import PageNotFound from './pages/PageNotFound';
+import LoadingSpinner from './components/LoadingSpinner';
 
 function App() {
+  const [loading, setLoading] = useState(false);
+  const location = useLocation();
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => setLoading(false), 1000); // Simulating loading time
+    return () => clearTimeout(timer);
+  }, [location]);
   return (
     <>
+    <LoadingSpinner loading={loading} />
     <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
