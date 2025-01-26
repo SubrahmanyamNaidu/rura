@@ -55,11 +55,11 @@ const stats = [
 
 const testimonials = [
   {
-    name: 'John Doe',
+    name: 'Subrahmanyam',
     feedback: 'Volunteering with RURA Foundation has been a life-changing experience for me.',
   },
   {
-    name: 'Jane Smith',
+    name: 'Anitha',
     feedback: 'Partnering with RURA Foundation helped us reach a larger community and create impact.',
   },
 ];

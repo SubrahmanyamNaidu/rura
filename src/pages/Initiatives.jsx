@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Box, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { useNavigate } from "react-router-dom";
 
 import T1 from '../assets/t1.png'
 import T2 from '../assets/t2.png'
@@ -41,26 +42,31 @@ const initiatives = [
     title: 'Entrepreneurship Development',
     description: 'Fostering entrepreneurial ecosystems in rural and urban areas with mentorship programs, workshops, and funding opportunities.',
     image: T1,
+    path: 'entrepreneurship-development',
   },
   {
     title: 'Skill Development',
     description: 'Equipping individuals with future-ready skills in AI, robotics, and IoT, along with soft skills for professional success.',
     image: T2,
+    path: 'skill-development',
   },
   {
     title: 'Climate Action',
     description: 'Promoting sustainability through tree plantation drives, eco-friendly practices, and climate awareness campaigns.',
     image: T3,
+    path: 'climate-action',
   },
   {
     title: 'Education',
     description: 'Bridging education gaps by offering scholarships, rural school support, and e-learning initiatives.',
     image: T4,
+    path: 'education',
   },
   {
     title: 'Psychological Education',
     description: 'Providing mental health support through counseling, awareness campaigns, and stress management workshops.',
     image: T5,
+    path:'psychological-education'
   },
 ];
 
@@ -68,6 +74,11 @@ function Initiatives() {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
+  const navigate = useNavigate();
+
+  const handleLearnMore = (path) => {
+    navigate(`/initiatives/${path}`);
+  };
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
       <InitiativesSection>
@@ -101,6 +112,7 @@ function Initiatives() {
                     sx={{ mt: 2 }}
                     component={motion.button}
                     whileHover={{ scale: 1.1 }}
+                    onClick={() => handleLearnMore(initiative.path)}
                   >
                     Learn More
                   </Button>

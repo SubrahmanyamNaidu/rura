@@ -1,0 +1,48 @@
+{
+    "entrepreneurship-development": {
+      "title": "Entrepreneurship Development",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Entrepreneurship is the cornerstone of economic and social progress. The RURA Foundation’s programs foster innovation and provide individuals with the skills, knowledge, and resources needed to build sustainable businesses."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Rural Entrepreneurship Development"
+        },
+        {
+          "type": "paragraph",
+          "text": "We empower rural communities by nurturing local entrepreneurs and promoting self-sustaining economic models."
+        },
+        {
+          "type": "image",
+          "src": "https://source.unsplash.com/800x400/?business",
+          "alt": "Rural Entrepreneurship"
+        },
+        {
+          "type": "paragraph",
+          "text": "This initiative also focuses on creating local job opportunities and reducing migration to urban areas."
+        }
+      ]
+    },
+    "skill-development": {
+      "title": "Skill Development",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Equipping individuals with future-ready skills in AI, robotics, and IoT, along with soft skills for professional success."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Technical Skills"
+        },
+        {
+          "type": "paragraph",
+          "text": "Our programs offer hands-on training in the latest technologies such as AI, IoT, and blockchain."
+        }
+      ]
+    }
+  }
+  

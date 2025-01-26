@@ -54,12 +54,12 @@ const contactDetails = [
   {
     icon: <LocationOn sx={{ fontSize: 40, color: '#f59e0b' }} />,
     title: 'Our Office',
-    info: '123 Main Street, New York, USA',
+    info: 'Andhra Pradesh,Kakinada',
   },
   {
     icon: <Phone sx={{ fontSize: 40, color: '#1e40af' }} />,
     title: 'Call Us',
-    info: '+1 234 567 890',
+    info: '+91 94928 59634',
   },
   {
     icon: <Email sx={{ fontSize: 40, color: '#64748b' }} />,

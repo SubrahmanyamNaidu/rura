@@ -71,14 +71,14 @@ const upcomingEvents = [
   {
     title: 'Entrepreneurship Bootcamp 2024',
     date: 'March 15, 2024',
-    location: 'New York, USA',
+    location: 'Andhra Pradesh, Kakinada',
     description: 'Join us for a hands-on bootcamp to empower aspiring entrepreneurs.',
     image: 'https://source.unsplash.com/400x300/?business,startup',
   },
   {
     title: 'Sustainability Summit',
     date: 'April 10, 2024',
-    location: 'London, UK',
+    location: 'Andhra Pradesh, Kakinada',
     description: 'An event dedicated to climate action and sustainable business practices.',
     image: 'https://source.unsplash.com/400x300/?nature,sustainability',
   },

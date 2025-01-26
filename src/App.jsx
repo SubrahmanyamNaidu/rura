@@ -11,6 +11,7 @@ import Applications from './pages/Applications';
 import Navbar from './components/Navbar';
 import PageNotFound from './pages/PageNotFound';
 import LoadingSpinner from './components/LoadingSpinner';
+import InitiativeDetail from './pages/InitiativeDetail';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/initiatives" element={<Initiatives />} />
+        <Route path="/initiatives/:id" element={<InitiativeDetail />} />
         <Route path="/get-involved" element={<GetInvolved />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/events" element={<Events />} />
