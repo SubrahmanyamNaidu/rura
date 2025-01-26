@@ -1,6 +1,11 @@
 import { useEffect } from 'react';
 import { Container, Typography, Grid, Card, CardContent, Button, Box } from '@mui/material';
+import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
+import E1 from '../assets/e1.jpg';
+import E2 from '../assets/e2.jpg';
+import PE1 from '../assets/pe1.jpg';
+import PE2 from '../assets/pe2.jpg';
 
 const PageWrapper = styled(Box)`
   background: #f9fafb;
@@ -69,18 +74,18 @@ const StyledButton = styled(Button)`
 
 const upcomingEvents = [
   {
-    title: 'Entrepreneurship Bootcamp 2024',
-    date: 'March 15, 2024',
+    title: "RURA Foundation's CXO Connect",
+    date: 'February 15, 2025',
     location: 'Andhra Pradesh, Kakinada',
-    description: 'Join us for a hands-on bootcamp to empower aspiring entrepreneurs.',
-    image: 'https://source.unsplash.com/400x300/?business,startup',
+    description: 'A premier networking and knowledge-sharing platform that brings together Chief Experience Officers (CXOs) and industry leaders from diverse sectors.',
+    image: E2,
   },
   {
     title: 'Sustainability Summit',
-    date: 'April 10, 2024',
+    date: 'April 10, 2025',
     location: 'Andhra Pradesh, Kakinada',
     description: 'An event dedicated to climate action and sustainable business practices.',
-    image: 'https://source.unsplash.com/400x300/?nature,sustainability',
+    image: E1,
   },
 ];
 
@@ -88,12 +93,12 @@ const pastEvents = [
   {
     title: 'Tech Innovation Conference 2023',
     description: 'Exploring the future of AI and technology.',
-    image: 'https://source.unsplash.com/400x300/?technology,conference',
+    image: PE1,
   },
   {
     title: 'Women in Leadership',
     description: 'Empowering women to take leadership roles.',
-    image: 'https://source.unsplash.com/400x300/?women,leadership',
+    image: PE2,
   },
 ];
 
@@ -121,7 +126,7 @@ function Events() {
           {upcomingEvents.map((event, index) => (
             <Grid item xs={12} md={6} key={index}>
               <StyledCard>
-                <img src={event.image} alt={event.title} style={{ width: '100%', borderRadius: '10px' }} />
+                <img src={event.image} alt={event.title} style={{ width: '100%',height:'250px', borderRadius: '10px' }} />
                 <CardContent>
                   <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 1, color: '#1e40af' }}>
                     {event.title}
@@ -132,7 +137,7 @@ function Events() {
                   <Typography variant="body1" sx={{ mb: 2 }}>
                     {event.description}
                   </Typography>
-                  <StyledButton fullWidth href="#">
+                  <StyledButton fullWidth component={Link} to="/events/register">
                     Register Now
                   </StyledButton>
                 </CardContent>
@@ -147,7 +152,7 @@ function Events() {
           {pastEvents.map((event, index) => (
             <Grid item xs={12} md={6} key={index}>
               <StyledCard>
-                <img src={event.image} alt={event.title} style={{ width: '100%', borderRadius: '10px' }} />
+                <img src={event.image} alt={event.title} style={{ width: '100%',height:'250px', borderRadius: '10px' }} />
                 <CardContent>
                   <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 2, color: '#1e40af' }}>
                     {event.title}

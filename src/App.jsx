@@ -12,6 +12,7 @@ import Navbar from './components/Navbar';
 import PageNotFound from './pages/PageNotFound';
 import LoadingSpinner from './components/LoadingSpinner';
 import InitiativeDetail from './pages/InitiativeDetail';
+import EventRegistration from './pages/EventRegistration';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -36,6 +37,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/applications" element={<Applications />} />
+        <Route path="/events/register" element={<EventRegistration />} />
         <Route path="*" element={<PageNotFound/>}/>
       </Routes>
     
