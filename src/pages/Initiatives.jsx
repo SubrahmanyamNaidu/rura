@@ -3,6 +3,11 @@ import { Box, Typography, Grid, Card, CardContent, CardMedia, Button } from '@mu
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
+import T1 from '../assets/t1.png'
+import T2 from '../assets/t2.png'
+import T3 from '../assets/t3.png'
+import T4 from '../assets/t4.png'
+import T5 from '../assets/t5.png'
 const GradientText = styled(Typography)`
   font-size: 3rem;
   font-weight: bold;
@@ -35,27 +40,27 @@ const initiatives = [
   {
     title: 'Entrepreneurship Development',
     description: 'Fostering entrepreneurial ecosystems in rural and urban areas with mentorship programs, workshops, and funding opportunities.',
-    image: 'https://source.unsplash.com/600x400/?business,entrepreneurship',
+    image: T1,
   },
   {
     title: 'Skill Development',
     description: 'Equipping individuals with future-ready skills in AI, robotics, and IoT, along with soft skills for professional success.',
-    image: 'https://source.unsplash.com/600x400/?technology,education',
+    image: T2,
   },
   {
     title: 'Climate Action',
     description: 'Promoting sustainability through tree plantation drives, eco-friendly practices, and climate awareness campaigns.',
-    image: 'https://source.unsplash.com/600x400/?nature,climate',
+    image: T3,
   },
   {
     title: 'Education',
     description: 'Bridging education gaps by offering scholarships, rural school support, and e-learning initiatives.',
-    image: 'https://source.unsplash.com/600x400/?school,learning',
+    image: T4,
   },
   {
     title: 'Psychological Education',
     description: 'Providing mental health support through counseling, awareness campaigns, and stress management workshops.',
-    image: 'https://source.unsplash.com/600x400/?mental-health,counseling',
+    image: T5,
   },
 ];
 
@@ -78,6 +83,7 @@ function Initiatives() {
                   height="200"
                   image={initiative.image}
                   alt={initiative.title}
+                  
                 />
                 <CardContent>
                   <Typography variant="h5" gutterBottom>

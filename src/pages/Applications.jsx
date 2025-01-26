@@ -12,7 +12,7 @@ const PageWrapper = styled(Box)`
 const HeroSection = styled(Box)`
   text-align: center;
   padding: 100px 20px;
-  background: url('https://source.unsplash.com/1600x900/?application,register') no-repeat center/cover;
+  background: url('https://source.unsplash.com/1600x900/?success,goal') no-repeat center/cover;
   position: relative;
 
   &::before {

@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Typography, Box, Grid, Card, CardContent } from '@mui/material';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { BusinessCenter, Visibility, VerifiedUser, HistoryEdu } from '@mui/icons-material';
 
 const AboutSection = styled(Box)`
   padding: 80px 20px;
@@ -14,6 +15,18 @@ const StyledCard = styled(Card)`
   &:hover {
     transform: translateY(-10px);
   }
+`;
+
+const IconWrapper = styled(Box)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
 `;
 
 const GradientText = styled(Typography)`
@@ -42,7 +55,10 @@ function About() {
             <Grid item xs={12} md={4}>
               <StyledCard component={motion.div} whileHover={{ scale: 1.05 }}>
                 <CardContent>
-                  <Typography variant="h5" gutterBottom color="primary">
+                  <IconWrapper>
+                    <BusinessCenter fontSize="large" sx={{ color: '#fff', fontSize: 48 }} />
+                  </IconWrapper>
+                  <Typography variant="h5"  gutterBottom color="primary" sx={{ fontWeight:"700"}}>
                     Our Mission
                   </Typography>
                   <Typography>
@@ -55,7 +71,10 @@ function About() {
             <Grid item xs={12} md={4}>
               <StyledCard component={motion.div} whileHover={{ scale: 1.05 }}>
                 <CardContent>
-                  <Typography variant="h5" gutterBottom color="secondary">
+                  <IconWrapper>
+                    <Visibility fontSize="large" sx={{ color: '#fff', fontSize: 48 }} />
+                  </IconWrapper>
+                  <Typography variant="h5" gutterBottom color="secondary" sx={{ fontWeight:"700"}}>
                     Our Vision
                   </Typography>
                   <Typography>
@@ -68,7 +87,10 @@ function About() {
             <Grid item xs={12} md={4}>
               <StyledCard component={motion.div} whileHover={{ scale: 1.05 }}>
                 <CardContent>
-                  <Typography variant="h5" gutterBottom color="success">
+                  <IconWrapper>
+                    <VerifiedUser fontSize="large" sx={{ color: '#fff', fontSize: 48 }} />
+                  </IconWrapper>
+                  <Typography variant="h5" gutterBottom color="success" sx={{ fontWeight:"700"}}>
                     Our Values
                   </Typography>
                   <Typography>
@@ -81,7 +103,10 @@ function About() {
             <Grid item xs={12} md={4}>
               <StyledCard component={motion.div} whileHover={{ scale: 1.05 }}>
                 <CardContent>
-                  <Typography variant="h5" gutterBottom color="error">
+                  <IconWrapper>
+                    <HistoryEdu fontSize="large" sx={{ color: '#fff', fontSize: 48 }} />
+                  </IconWrapper>
+                  <Typography variant="h5" gutterBottom color="error" sx={{ fontWeight:"700"}}>
                     Our Story
                   </Typography>
                   <Typography>
